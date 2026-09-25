@@ -22,11 +22,9 @@ h2{font-size:clamp(28px,4vw,42px);margin-bottom:12px}
 .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #f5b33566}
 .btn.dark{background:var(--ink);color:#fff}.btn.dark:hover{box-shadow:0 8px 20px #0f2a4355}
 .btn.ghost{background:transparent;border:2px solid #ffffff55;color:#fff}
-/* top bar + nav */
-.top{background:var(--ink);color:#cfe0ee;font-size:14px}
-.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
-.top a{text-decoration:none}.top .ig{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(45deg,#f9a13a,#e1306c,#7b3fe4);color:#fff;padding:4px 12px;border-radius:99px;font-weight:700}
-nav.bar{position:sticky;top:0;z-index:45;background:#0a1e31ee;backdrop-filter:blur(10px);border-bottom:1px solid #ffffff14}.logo img{height:58px;width:58px;border-radius:50%;object-fit:cover;border:2px solid var(--sun);box-shadow:0 0 0 3px #f5b33533}
+.btn.ghost-dark{background:transparent;border:2px solid var(--ink);color:var(--ink)}.btn.ghost-dark:hover{background:var(--ink);color:#fff}
+nav.bar{position:sticky;top:0;z-index:45;background:#0a1e31ee;backdrop-filter:blur(10px);border-bottom:1px solid #ffffff14}
+.logo img{height:58px;width:58px;border-radius:50%;object-fit:cover;border:2px solid var(--sun);box-shadow:0 0 0 3px #f5b33533}
 nav.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
 .logo{display:flex;align-items:center;gap:10px;font-family:'Bricolage Grotesque';font-weight:800;font-size:20px;text-decoration:none;color:#fff}
 .navr{display:flex;align-items:center;gap:12px}
@@ -41,9 +39,9 @@ nav.bar .wrap{display:flex;align-items:center;justify-content:space-between;heig
 .drawer a.l:hover{color:var(--sun)}.drawer .btn{margin-top:20px;justify-content:center}
 .drawer small{margin-top:auto;color:#9fb6ca}
 .scrim{position:fixed;inset:0;background:#0009;z-index:35;opacity:0;pointer-events:none;transition:.3s}.scrim.open{opacity:1;pointer-events:auto}
-/* hero */
-.hero{position:relative;background:radial-gradient(900px 520px at 80% 30%,#17608f88,transparent 70%),radial-gradient(600px 400px at 0% 100%,#0e8f8633,transparent 70%),linear-gradient(180deg,#0a1e31,#0f2a43);color:#fff;padding:64px 0 96px;overflow:hidden}.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(#ffffff22 1.2px,transparent 1.5px);background-size:26px 26px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 65%);mask-image:linear-gradient(90deg,transparent,#000 65%);pointer-events:none}.hero .wrap{position:relative}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero{position:relative;background:radial-gradient(900px 520px at 80% 30%,#17608f88,transparent 70%),radial-gradient(600px 400px at 0% 100%,#0e8f8633,transparent 70%),linear-gradient(180deg,#0a1e31,#0f2a43);color:#fff;padding:64px 0 96px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(#ffffff22 1.2px,transparent 1.5px);background-size:26px 26px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 65%);mask-image:linear-gradient(90deg,transparent,#000 65%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .hero h1{font-size:clamp(36px,5.6vw,64px);margin-bottom:18px}
 .hero p{color:#bcd0e0;font-size:18px;max-width:46ch;margin-bottom:28px}
 .hero .row{display:flex;gap:12px;flex-wrap:wrap}
@@ -52,7 +50,6 @@ nav.bar .wrap{display:flex;align-items:center;justify-content:space-between;heig
 .art{width:100%;height:auto;filter:drop-shadow(0 30px 40px #0006)}
 .plane{animation:fly 6s ease-in-out infinite alternate}
 @keyframes fly{to{transform:translate(14px,-10px) rotate(3deg)}}
-/* countries */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
 .stamp{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
 .stamp:hover{transform:translateY(-4px);box-shadow:0 18px 40px #0f2a4322}
@@ -68,17 +65,15 @@ nav.bar .wrap{display:flex;align-items:center;justify-content:space-between;heig
 .stamp h3{font-size:22px}.stamp p{color:var(--mute);font-size:15px;flex:1}
 .stamp button{align-self:flex-start;background:none;border:0;color:var(--sea);font:700 15px inherit;font-family:inherit;cursor:pointer;padding:4px 0;display:inline-flex;gap:6px;align-items:center}
 .stamp button:hover{text-decoration:underline}
-/* process */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
 @property --a{syntax:'<angle>';initial-value:0deg;inherits:false}@keyframes spin{to{--a:360deg}}
 .step{position:relative;border-radius:var(--r);padding:30px 26px 26px;border:3px solid transparent;color:#fff;background:linear-gradient(var(--ink),#0a1e31) padding-box,conic-gradient(from var(--a),#a87412,#ffe9a8,#f5b335,#6b4a08,#ffe9a8,#a87412) border-box;animation:spin 4s linear infinite;box-shadow:0 10px 30px #f5b33530}
 .step::before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:22px;background:var(--sea);color:#fff;width:34px;height:34px;border-radius:50%;display:grid;place-content:center;font-weight:800}
 .step h3{font-size:20px;margin:6px 0}.step p{color:#a9bfd1;font-size:15px}
 .cta-row{margin-top:36px}
-/* about / icons / available */
 .ico{width:54px;height:54px;border-radius:16px;display:grid;place-content:center;background:#f5b33520;border:1px solid #f5b33566;margin-bottom:14px}
 .ico svg{width:28px;height:28px;stroke:var(--sun);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:right}
 .abt-card{position:relative;border-radius:24px;padding:12px;border:4px solid transparent;background:linear-gradient(160deg,#0f2a43,#0a1e31) padding-box,conic-gradient(from var(--a),#a87412,#ffe9a8,#f5b335,#6b4a08,#ffe9a8,#a87412) border-box;animation:spin 4s linear infinite;box-shadow:0 24px 60px #0f2a4340,0 0 30px #f5b33540}
 .abt-card img{width:100%;height:auto;border-radius:16px;display:block}
 .abt-card .tag{position:absolute;right:-12px;bottom:22px;background:var(--sun);color:var(--ink);font-weight:800;padding:10px 18px;border-radius:14px;box-shadow:0 10px 24px #0004}
@@ -92,7 +87,6 @@ nav.bar .wrap{display:flex;align-items:center;justify-content:space-between;heig
 a.tile:hover{background:#ffffff1c;transform:translateY(-3px)}
 .tile small{display:block;color:#9fb6ca;margin-bottom:4px}.tile b{font:700 19px/1.3 'Bricolage Grotesque'}
 @media(max-width:860px){.about{grid-template-columns:1fr;gap:36px}}
-/* reviews */
 .rev{background:var(--ink);color:#fff}.rev .lead{color:#9fb6ca}
 .slides{overflow:hidden;border-radius:var(--r)}
 .track{display:flex;transition:transform .5s}
@@ -106,7 +100,22 @@ a.tile:hover{background:#ffffff1c;transform:translateY(-3px)}
 .dot[aria-current=true]{width:38px;background:var(--sun)}
 .arrow{width:44px;height:44px;border-radius:50%;border:1px solid #ffffff44;background:none;color:#fff;font-size:20px;cursor:pointer}
 .arrow:hover{background:#ffffff1a}
-/* form */
+/* our testimonials (instagram video grid) */
+.ourtest{background:#fff}
+.tag-line{display:inline-block;font:700 13px/1 'DM Sans';letter-spacing:2px;text-transform:uppercase;color:var(--sea);background:#0e8f8614;border:1px solid #0e8f8655;padding:8px 16px;border-radius:99px;margin-bottom:16px}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.vcard{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;display:block;border:3px solid transparent;background:linear-gradient(#0f2a43,#0f2a43) padding-box,conic-gradient(from var(--a),#a87412,#ffe9a8,#f5b335,#6b4a08,#ffe9a8,#a87412) border-box;animation:spin 4s linear infinite;box-shadow:0 14px 34px #0f2a4326;transition:transform .2s}
+.vcard:hover{transform:translateY(-4px) scale(1.015)}
+.vcard img,.vcard .vph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vcard .vph{display:grid;place-content:center;color:#ffffffcc;font:800 16px 'Bricolage Grotesque';background:linear-gradient(160deg,#123a5c,#0a1e31);text-align:center;padding:10px}
+.vcard::after{content:'';position:absolute;inset:auto 0 0;height:42%;background:linear-gradient(transparent,#000a);pointer-events:none}
+.vcard .play{position:absolute;inset:0;display:grid;place-content:center;z-index:2}
+.vcard .play span{width:52px;height:52px;border-radius:50%;background:#ffffffe6;display:grid;place-content:center;box-shadow:0 6px 18px #0006;transition:transform .2s}
+.vcard:hover .play span{transform:scale(1.1)}
+.vcard .play svg{width:20px;height:20px;fill:var(--ink);margin-left:3px}
+.vcard .cap{position:absolute;left:12px;right:12px;bottom:12px;z-index:2;color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;gap:6px}
+.vcard .cap svg{width:16px;height:16px;flex:none}
+@media(max-width:860px){.vgrid{grid-template-columns:repeat(2,1fr)}}
 .enq{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
 form{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:grid;gap:16px;box-shadow:0 20px 50px #0f2a4314}
 label{display:grid;gap:6px;font-weight:700;font-size:14px}
@@ -115,13 +124,14 @@ input:focus,select:focus{border-color:var(--sea);outline:none;box-shadow:0 0 0 3
 form .btn{justify-content:center;background:#25d366;color:#04361a}
 .note{font-size:13px;color:var(--mute);text-align:center}
 .info p{margin:8px 0;color:var(--mute)}.info b{color:var(--ink)}
-/* footer + floating */
 footer{background:#0a1e31;color:#9fb6ca;padding:36px 0;font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .side{position:fixed;right:14px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:25}
-.side a{width:54px;height:54px;border-radius:50%;display:grid;place-content:center;color:#fff;box-shadow:0 8px 20px #0004;transition:transform .2s}
-.side a:hover{transform:scale(1.1)}
+.side a,.side button{width:54px;height:54px;border-radius:50%;display:grid;place-content:center;color:#fff;box-shadow:0 8px 20px #0004;transition:transform .2s;border:0;cursor:pointer}
+.side a:hover,.side button:hover{transform:scale(1.1)}
 .side .i{background:linear-gradient(45deg,#f9a13a,#e1306c,#7b3fe4)}.side .w{background:#25d366}
+.side .jump{background:var(--ink);border:2px solid #f5b33566}
+.side .jump svg{stroke:var(--sun)}
 .rail{position:fixed;left:16px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:14px;z-index:20}
 .rail a{position:relative;width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--ink);display:block;transition:.25s}
 .rail a.on{background:var(--sun);transform:scale(1.35)}
@@ -129,7 +139,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .rail a:hover span,.rail a:focus-visible span{opacity:1}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--ink);color:#fff;padding:12px 20px;border-radius:99px;z-index:50;transition:.3s}.toast.show{transform:translate(-50%,0)}
 @media(max-width:860px){.hero .wrap,.enq{grid-template-columns:1fr}.steps{grid-template-columns:1fr;gap:30px}.rail{display:none}section{padding:64px 0}.art{max-width:380px;margin:auto}}
-@media(max-width:520px){.top .hrs{display:none}nav.bar .btn{display:none}.side a{width:48px;height:48px}}
+@media(max-width:520px){nav.bar .btn{display:none}.side a,.side button{width:48px;height:48px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -143,12 +153,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <div class="scrim" id="scrim"></div>
 <aside class="drawer" id="drawer" aria-label="Menu">
- <a class="l" href="#home">Home</a><a class="l" href="#about">About us</a><a class="l" href="#countries">Countries</a><a class="l" href="#process">How it works</a><a class="l" href="#reviews">Reviews</a><a class="l" href="#available">Contact</a><a class="l" href="#enquire">Enquire</a>
+ <a class="l" href="#home">Home</a><a class="l" href="#about">About us</a><a class="l" href="#countries">Countries</a><a class="l" href="#process">How it works</a><a class="l" href="#reviews">Reviews</a><a class="l" href="#ourtestimonials">Video reviews</a><a class="l" href="#available">Contact</a><a class="l" href="#enquire">Enquire</a>
  <a class="btn" href="#enquire">Start your enquiry</a>
  <small>D9, NBA Tower, Thillainagar, Tiruchirappalli 620018</small>
 </aside>
 
-<nav class="rail" aria-label="Page sections"><a href="#home" class="on" aria-label="Home"><span>Home</span></a><a href="#about" aria-label="About us"><span>About us</span></a><a href="#countries" aria-label="Countries"><span>Countries</span></a><a href="#process" aria-label="How it works"><span>How it works</span></a><a href="#reviews" aria-label="Reviews"><span>Reviews</span></a><a href="#available" aria-label="Contact"><span>Contact</span></a><a href="#enquire" aria-label="Enquire"><span>Enquire</span></a></nav>
+<nav class="rail" aria-label="Page sections"><a href="#home" class="on" aria-label="Home"><span>Home</span></a><a href="#about" aria-label="About us"><span>About us</span></a><a href="#countries" aria-label="Countries"><span>Countries</span></a><a href="#process" aria-label="How it works"><span>How it works</span></a><a href="#reviews" aria-label="Reviews"><span>Reviews</span></a><a href="#ourtestimonials" aria-label="Video reviews"><span>Video reviews</span></a><a href="#available" aria-label="Contact"><span>Contact</span></a><a href="#enquire" aria-label="Enquire"><span>Enquire</span></a></nav>
 
 <main>
 <section class="hero" id="home"><div class="wrap">
@@ -200,7 +210,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
    <li><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></span><div><b>Personal support</b><small>One team looks after your file from first enquiry to submission.</small></div></li>
    <li><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><div><b>Built on experience</b><small>Helping travellers from across Tamil Nadu since 2020.</small></div></li>
   </ul>
-  <a class="btn dark" href="#enquire">Talk to our team</a>
+<div class="row"><a class="btn dark" href="#enquire">Talk to our team</a><a class="btn ghost-dark" style="margin-left:20px" href="about-us.html">Learn more<i>&#8250;</i></a></div>
  </div>
 </div></section>
 
@@ -240,6 +250,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  <div class="cta-row"><a class="btn" href="#enquire">Get help with your visa</a></div>
 </div></section>
 
+<section class="ourtest" id="ourtestimonials"><div class="wrap">
+ <span class="tag-line">Your trusted visa partner</span>
+ <h2>Our Testimonials</h2>
+ <p class="lead">Watch real clients talk about their visa experience with us. Tap a video to open it on Instagram.</p>
+ <div class="vgrid" id="vgrid"></div>
+</div></section>
+
 <section class="avl" id="available"><div class="wrap">
  <h2>We are available at</h2>
  <p class="ad">Book a visa consultation before you book your flight.</p>
@@ -270,6 +287,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <footer><div class="wrap"><span>&copy; Continental Visa, Tiruchirappalli</span><span><a href="https://instagram.com/continental_visa" target="_blank" rel="noopener">Instagram @continental_visa</a> &nbsp;|&nbsp; <a href="tel:+916379205133">+91 63792 05133</a></span></div></footer>
 
 <div class="side">
+ <button class="jump" id="toTop" aria-label="Scroll to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+ <button class="jump" id="toBottom" aria-label="Scroll to bottom"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></button>
  <a class="i" href="https://instagram.com/continental_visa" target="_blank" rel="noopener" aria-label="Instagram: continental_visa"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></a>
  <a class="w" href="https://wa.me/916379205133?text=Hello%20Continental%20Visa%2C%20I%20want%20to%20know%20about%20a%20visa." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M12 3a9 9 0 00-7.7 13.6L3 21l4.5-1.2A9 9 0 1012 3z"/><path d="M9 8.5c.5 3 2.5 5 5.5 6l1.5-1.5-2-1-1 .8c-1-.5-2-1.5-2.5-2.5l.8-1-1-2z" fill="#fff"/></svg></a>
 </div>
@@ -280,12 +299,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  1) LOGO: paste your logo address between the quotes. A full link (https://...) or a file path like 'images/logo.png'.
  2) PHOTOS: paste 3 photo addresses for each country the same way. Leave '' to show a coloured placeholder.
  3) SLIDE_MS: time between photo changes (2000 = 2 seconds).
+ 4) VIDEO_TESTIMONIALS: paste an Instagram video/reel link and a thumbnail image address for each of the 4 tiles.
+    thumb: a photo address (like the country photos above) shown as the tile's cover picture. Leave '' for a placeholder.
+    link:  the Instagram video/reel/post link. Leave '' and the tile will not be clickable yet.
+    name:  the client's name and city shown at the bottom of the tile.
 =============================================== */
 const LOGO='images/logo (2).png';
 const SLIDE_MS=2000;
 const PHOTOS={
  'United States':['images/us1.png','images/us2.png','images/us3.png'],
- 'Canada':['images/c1 (1).png','images/c2.png','images/c3.png'],
+ 'Canada':['images/c1 (1).png','images/c2.png','images/c3.jpg'],
  'United Kingdom':['images/uk1.png','images/uk2.png','images/uk3.jpg'],
  'Australia':['images/a1.png','images/a2.png','images/a3.png'],
  'Japan':['images/j1.png','images/j2.jpg','images/j3.jpg'],
@@ -297,6 +320,12 @@ const PHOTOS={
  'France':['images/f1.png','images/f2.jpg','images/f3.jpg'],
  'Netherlands':['images/n1.png','images/n2.jpg','images/n3.jpg']
 };
+const VIDEO_TESTIMONIALS=[
+ {thumb:'images/t2.jpeg',link:'https://www.instagram.com/reel/DclX--lyLAL/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==',name:'sengol, trichy'},
+ {thumb:'images/t1.jpeg',link:'https://www.instagram.com/reel/DbBAUkPTq61/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==',name:'srinivasan, kodaikanal'},
+ {thumb:'images/t3.jpeg',link:'https://www.instagram.com/reel/DWWTt0JS7n9/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==',name:'maya,chennai'},
+ {thumb:'images/t4.jpeg',link:'https://www.instagram.com/reel/DdqLjHUzRtR/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==',name:'kokila,kallakuruchi'}
+];
 /* ============================================= */
 const WA='916379205133';
 const C=[['US','United States','Tourist and visit visa guidance for the US.','#0f2a43'],['CA','Canada','Plan your Canadian visit with trusted support.','#c0392b'],['UK','United Kingdom','Smooth, reliable UK tourist visa help.','#2c4a8a'],['AU','Australia','Simple guidance for your Australian trip.','#0e8f86'],['JP','Japan','Professional support for Japan tourist visas.','#b5304a'],['KR','South Korea','Stress-free South Korea visit visa help.','#3b6fb6'],['EU','Schengen Countries','One visa for 26 European nations.','#6a4c93'],['DE','Germany','Tourist and visit visa guidance for Germany.','#2b2b2b'],['CH','Switzerland','Plan your Swiss trip with expert visa support.','#d52b1e'],['NZ','New Zealand','Simple visa guidance for New Zealand.','#0b3d6e'],['FR','France','Tourist and visit visa guidance for France.','#1f3f8f'],['NL','Netherlands','Simple visa guidance for the Netherlands.','#e8590c']];
@@ -313,12 +342,22 @@ function show(p,k){p.querySelectorAll('img,.ph0').forEach((x,j)=>x.classList.tog
 setInterval(()=>document.querySelectorAll('.ph').forEach(p=>{const s=[...p.querySelectorAll('img,.ph0')];if(s.length>1)show(p,(s.findIndex(x=>x.classList.contains('on'))+1)%s.length)}),SLIDE_MS);
 $('#cgrid').addEventListener('click',e=>{const d=e.target.closest('.pd i');if(d)show(d.closest('.ph'),[...d.parentNode.children].indexOf(d))});
 $('#cgrid').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;sel.value=b.dataset.c;$('#enquire').scrollIntoView();setTimeout(()=>document.querySelector('[name=name]').focus({preventScroll:true}),400)});
+/* video testimonials grid */
+VIDEO_TESTIMONIALS.forEach(v=>{
+ const cover=v.thumb?`<img src="${v.thumb}" alt="${v.name} video testimonial" loading="lazy">`:`<div class="vph">${v.name||'Video testimonial'}</div>`;
+ const tag=v.link?'a':'div';
+ const attrs=v.link?`href="${v.link}" target="_blank" rel="noopener"`:'';
+ $('#vgrid').insertAdjacentHTML('beforeend',`<${tag} class="vcard" ${attrs} aria-label="${v.name} — watch on Instagram">${cover}<div class="play"><span><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span></div><div class="cap"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg>${v.name||''}</div></${tag}>`);
+});
 /* menu */
 const dr=$('#drawer'),sc=$('#scrim'),bg=$('#burger');
 const tog=o=>{dr.classList.toggle('open',o);sc.classList.toggle('open',o);bg.setAttribute('aria-expanded',o)};
 bg.onclick=()=>tog(!dr.classList.contains('open'));sc.onclick=()=>tog(false);
 dr.querySelectorAll('a').forEach(a=>a.onclick=()=>tog(false));
 addEventListener('keydown',e=>{if(e.key==='Escape')tog(false)});
+/* scroll to top / bottom */
+$('#toTop').onclick=()=>scrollTo({top:0,behavior:'smooth'});
+$('#toBottom').onclick=()=>scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
 /* section indicators */
 const rail=[...document.querySelectorAll('.rail a')];
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)rail.forEach(a=>a.classList.toggle('on',a.hash==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
@@ -342,3 +381,4 @@ $('#form').addEventListener('submit',e=>{
 </script>
 </body>
 </html>
+
