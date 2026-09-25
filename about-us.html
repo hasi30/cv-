@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us | Continental Visa</title>
+<meta name="description" content="Continental Visa, established in 2020 and based in Tiruchirappalli (Trichy), specialises in tourist and visit visa consulting across a growing list of countries.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0f2a43;--sea:#0e8f86;--sun:#f5b335;--paper:#f6f8fb;--card:#fff;--mute:#5b6b7b;--line:#dbe3ec;--r:18px}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font:16px/1.6 'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15;letter-spacing:-.02em}
+a{color:inherit}img,svg{max-width:100%}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:1120px;margin:auto;padding:0 20px}
+section{padding:72px 0}
+h2{font-size:clamp(26px,3.6vw,38px);margin-bottom:14px}
+.lead{color:var(--mute);max-width:62ch}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--sun);color:var(--ink);font-weight:700;border:0;border-radius:99px;padding:13px 24px;cursor:pointer;text-decoration:none;font-size:16px;font-family:inherit;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #f5b33566}
+.btn.dark{background:var(--ink);color:#fff}.btn.dark:hover{box-shadow:0 8px 20px #0f2a4355}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+nav.bar{position:sticky;top:0;z-index:45;background:#0a1e31ee;backdrop-filter:blur(10px);border-bottom:1px solid #ffffff14}
+.logo img{height:58px;width:58px;border-radius:50%;object-fit:cover;border:2px solid var(--sun);box-shadow:0 0 0 3px #f5b33533}
+nav.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Bricolage Grotesque';font-weight:800;font-size:20px;text-decoration:none;color:#fff}
+.navr{display:flex;align-items:center;gap:12px}
+.burger{width:46px;height:46px;border-radius:14px;border:1px solid #ffffff33;background:#ffffff14;cursor:pointer;display:grid;place-content:center;gap:5px}
+.burger i{display:block;width:22px;height:2.5px;background:#fff;border-radius:2px;transition:.25s}
+.burger[aria-expanded=true] i:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.burger[aria-expanded=true] i:nth-child(2){opacity:0}
+.burger[aria-expanded=true] i:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+.drawer{position:fixed;inset:0 0 0 auto;width:min(340px,86vw);background:var(--ink);color:#fff;z-index:40;padding:90px 28px 28px;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;gap:6px}
+.drawer.open{transform:none}
+.drawer a.l{font-family:'Bricolage Grotesque';font-size:26px;font-weight:700;text-decoration:none;padding:8px 0;border-bottom:1px solid #ffffff1f}
+.drawer a.l:hover{color:var(--sun)}.drawer .btn{margin-top:20px;justify-content:center}
+.drawer small{margin-top:auto;color:#9fb6ca}
+.scrim{position:fixed;inset:0;background:#0009;z-index:35;opacity:0;pointer-events:none;transition:.3s}.scrim.open{opacity:1;pointer-events:auto}
+.pagehero{position:relative;background:radial-gradient(900px 460px at 80% 20%,#17608f88,transparent 70%),linear-gradient(180deg,#0a1e31,#0f2a43);color:#fff;padding:58px 0}
+.pagehero .tag-line{display:inline-block;font:700 13px/1 'DM Sans';letter-spacing:2px;text-transform:uppercase;color:var(--sun);background:#f5b33520;border:1px solid #f5b33566;padding:8px 16px;border-radius:99px;margin-bottom:16px}
+.pagehero h1{font-size:clamp(30px,5vw,50px)}
+.pagehero p{color:#bcd0e0;font-size:17px;max-width:60ch;margin-top:12px}
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}@keyframes spin{to{--a:360deg}}
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.abt-card{position:relative;border-radius:24px;padding:12px;border:4px solid transparent;background:linear-gradient(160deg,#0f2a43,#0a1e31) padding-box,conic-gradient(from var(--a),#a87412,#ffe9a8,#f5b335,#6b4a08,#ffe9a8,#a87412) border-box;animation:spin 4s linear infinite;box-shadow:0 24px 60px #0f2a4340,0 0 30px #f5b33540}
+.abt-card img{width:100%;height:auto;border-radius:16px;display:block}
+.abt-card .tag{position:absolute;right:-12px;bottom:22px;background:var(--sun);color:var(--ink);font-weight:800;padding:10px 18px;border-radius:14px;box-shadow:0 10px 24px #0004}
+p.body{color:var(--mute);margin-bottom:16px;max-width:60ch}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:36px}}
+.svc{background:#fff}
+.svclist{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:28px 0}
+.svc-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;gap:14px;align-items:flex-start}
+.svc-card svg{width:26px;height:26px;stroke:var(--sea);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none;margin-top:2px}
+.svc-card b{display:block;margin-bottom:2px}
+.closing{background:linear-gradient(135deg,#0a1e31,#123a5c);color:#fff;text-align:center}
+.closing h2{color:var(--sun);max-width:44ch;margin:0 auto 10px}
+.closing p{color:#bcd0e0;max-width:52ch;margin:0 auto 28px}
+.flags{background:#fff}
+.flags h2{text-align:center}.flags .lead{margin:0 auto 32px;text-align:center}
+.frow{display:flex;justify-content:center;gap:34px;flex-wrap:wrap}
+.fitem{display:flex;flex-direction:column;align-items:center;gap:10px}
+.fitem svg{width:74px;height:50px;border-radius:6px;box-shadow:0 6px 16px #0f2a4326;border:1px solid #00000012}
+.fitem span{font-weight:700;font-size:14px;color:var(--mute)}
+footer{background:#0a1e31;color:#9fb6ca;padding:36px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.side{position:fixed;right:14px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:25}
+.side a,.side button{width:54px;height:54px;border-radius:50%;display:grid;place-content:center;color:#fff;box-shadow:0 8px 20px #0004;transition:transform .2s;border:0;cursor:pointer}
+.side a:hover,.side button:hover{transform:scale(1.1)}
+.side .i{background:linear-gradient(45deg,#f9a13a,#e1306c,#7b3fe4)}.side .w{background:#25d366}
+.side .jump{background:var(--ink);border:2px solid #f5b33566}
+.side .jump svg{stroke:var(--sun)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav class="bar"><div class="wrap">
+ <a class="logo" href="index.html"><img id="logoImg" alt="Continental Visa" hidden><svg id="logoMark" width="34" height="34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="15" fill="#0e8f86"/><ellipse cx="17" cy="17" rx="6" ry="15" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M2 17h30M5 9h24M5 25h24" stroke="#fff" stroke-width="1.6" fill="none"/></svg><span id="logoTxt">Continental Visa</span></a>
+ <div class="navr"><a class="btn" href="index.html#enquire">Enquire now</a>
+ <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button></div>
+</div></nav>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Menu">
+ <a class="l" href="index.html#home">Home</a><a class="l" href="index.html#about">About us</a><a class="l" href="index.html#countries">Countries</a><a class="l" href="index.html#process">How it works</a><a class="l" href="index.html#reviews">Reviews</a><a class="l" href="index.html#ourtestimonials">Video reviews</a><a class="l" href="index.html#available">Contact</a><a class="l" href="index.html#enquire">Enquire</a>
+ <a class="btn" href="index.html#enquire">Start your enquiry</a>
+ <small>D9, NBA Tower, Thillainagar, Tiruchirappalli 620018</small>
+</aside>
+
+<main>
+<section class="pagehero"><div class="wrap">
+ <span class="tag-line">Who are Continental Visa</span>
+ <h1>More Than Just a Traditional Visa &amp; Immigration Firm</h1>
+ <p>We go beyond paperwork, offering expert guidance in sponsoring and managing work visas, turning complex processes into successful outcomes backed by real experience.</p>
+</div></section>
+
+<section><div class="wrap about">
+ <div class="abt-card"><img src="images/logo-full.png" alt="Continental Visa: your trusted visa partner" loading="lazy"><div class="tag">Since 2020</div></div>
+ <div>
+  <h2>A client-first approach, built on real experience</h2>
+  <p class="body">With a strong track record and a client-first approach, we have been helping individuals and families secure tourist and visit visas to destinations around the world. Since 2020, our dedicated team has simplified the visa process, offering reliable guidance and personalised support every step of the way.</p>
+  <p class="body">Continental Visa Company, established in 2020 and proudly based in Trichy, has quickly become a trusted name in visa consulting. We specialise in providing comprehensive support for tourist and visit visa applications across an expanding list of countries worldwide.</p>
+  <p class="body" style="margin-bottom:0">Our mission is to deliver a seamless, transparent and hassle-free visa experience. From document preparation to final approval, we manage the entire lifecycle of the visa application process with precision and professionalism. With a client-focused approach, we tailor our services to meet each applicant's unique needs, ensuring strict compliance with international visa requirements and regulations.</p>
+ </div>
+</div></section>
+
+<section class="svc"><div class="wrap">
+ <h2>Our services include</h2>
+ <p class="lead">From your first enquiry to visa approval, here is what we handle for you.</p>
+ <div class="svclist">
+  <div class="svc-card"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><div><b>Personalised eligibility assessment</b><span class="lead" style="margin:0">We review your profile and travel plan before you apply.</span></div></div>
+  <div class="svc-card"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M9 14l2 2 4-4"/></svg><div><b>Document preparation and verification</b><span class="lead" style="margin:0">Every form and paper checked before it is submitted.</span></div></div>
+  <div class="svc-card"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg><div><b>Application submission and follow-up</b><span class="lead" style="margin:0">We track your file with the embassy or consulate.</span></div></div>
+  <div class="svc-card"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Real-time visa status tracking</b><span class="lead" style="margin:0">You always know where your application stands.</span></div></div>
+  <div class="svc-card"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg><div><b>Continued support until visa approval</b><span class="lead" style="margin:0">We stay with you through to the final decision.</span></div></div>
+ </div>
+</div></section>
+
+<section class="flags"><div class="wrap">
+ <h2>Popular destinations we cover</h2>
+ <p class="lead">Tourist and visit visa guidance for these and other countries.</p>
+ <div class="frow">
+  <div class="fitem"><svg viewBox="0 0 60 40" aria-label="United Kingdom flag"><rect width="60" height="40" fill="#00247d"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#cf142b" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#cf142b" stroke-width="6"/></svg><span>United Kingdom</span></div>
+  <div class="fitem"><svg viewBox="0 0 60 40" aria-label="United States flag"><rect width="60" height="40" fill="#fff"/><g fill="#b22234"><rect y="0" width="60" height="3.08"/><rect y="6.15" width="60" height="3.08"/><rect y="12.3" width="60" height="3.08"/><rect y="18.45" width="60" height="3.08"/><rect y="24.6" width="60" height="3.08"/><rect y="30.75" width="60" height="3.08"/><rect y="36.9" width="60" height="3.08"/></g><rect width="26" height="21.5" fill="#3c3b6e"/></svg><span>United States</span></div>
+  <div class="fitem"><svg viewBox="0 0 60 40" aria-label="Germany flag"><rect width="60" height="13.3" y="0" fill="#000"/><rect width="60" height="13.3" y="13.3" fill="#dd0000"/><rect width="60" height="13.4" y="26.6" fill="#ffce00"/></svg><span>Germany</span></div>
+  <div class="fitem"><svg viewBox="0 0 60 40" aria-label="France flag"><rect width="20" height="40" x="0" fill="#0055a4"/><rect width="20" height="40" x="20" fill="#fff"/><rect width="20" height="40" x="40" fill="#ef4135"/></svg><span>France</span></div>
+  <div class="fitem"><svg viewBox="0 0 60 40" aria-label="Schengen / European Union flag"><rect width="60" height="40" fill="#003399"/><g fill="#ffcc00"><circle cx="30" cy="8" r="1.6"/><circle cx="30" cy="32" r="1.6"/><circle cx="18" cy="11.2" r="1.6"/><circle cx="42" cy="11.2" r="1.6"/><circle cx="18" cy="28.8" r="1.6"/><circle cx="42" cy="28.8" r="1.6"/><circle cx="14" cy="20" r="1.6"/><circle cx="46" cy="20" r="1.6"/><circle cx="21" cy="6.2" r="1.6"/><circle cx="39" cy="6.2" r="1.6"/><circle cx="21" cy="33.8" r="1.6"/><circle cx="39" cy="33.8" r="1.6"/></g></svg><span>Schengen Countries</span></div>
+ </div>
+</div></section>
+
+<section class="closing"><div class="wrap">
+ <h2>Continental Visa Company — Your Trusted Partner in Global Travel Solutions</h2>
+ <p>At Continental Visa Company, we are committed to helping individuals and families travel with confidence. Whether you're planning a holiday or visiting loved ones abroad, our experienced team is here to guide you every step of the way.</p>
+ <div class="row" style="justify-content:center"><a class="btn" href="index.html#enquire">Start your enquiry</a><a class="btn dark" href="index.html#countries">Browse countries</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>&copy; Continental Visa, Tiruchirappalli</span><span><a href="https://instagram.com/continental_visa" target="_blank" rel="noopener">Instagram @continental_visa</a> &nbsp;|&nbsp; <a href="tel:+916379205133">+91 63792 05133</a></span></div></footer>
+
+<div class="side">
+ <button class="jump" id="toTop" aria-label="Scroll to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+ <button class="jump" id="toBottom" aria-label="Scroll to bottom"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></button>
+ <a class="i" href="https://instagram.com/continental_visa" target="_blank" rel="noopener" aria-label="Instagram: continental_visa"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></a>
+ <a class="w" href="https://wa.me/916379205133?text=Hello%20Continental%20Visa%2C%20I%20want%20to%20know%20about%20a%20visa." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M12 3a9 9 0 00-7.7 13.6L3 21l4.5-1.2A9 9 0 1012 3z"/><path d="M9 8.5c.5 3 2.5 5 5.5 6l1.5-1.5-2-1-1 .8c-1-.5-2-1.5-2.5-2.5l.8-1-1-2z" fill="#fff"/></svg></a>
+</div>
+
+<script>
+const LOGO='images/logo (2).png';
+const $=s=>document.querySelector(s);
+if(LOGO){const l=$('#logoImg');l.src=LOGO;l.hidden=false;$('#logoMark').style.display='none'}
+const dr=$('#drawer'),sc=$('#scrim'),bg=$('#burger');
+const tog=o=>{dr.classList.toggle('open',o);sc.classList.toggle('open',o);bg.setAttribute('aria-expanded',o)};
+bg.onclick=()=>tog(!dr.classList.contains('open'));sc.onclick=()=>tog(false);
+dr.querySelectorAll('a').forEach(a=>a.onclick=()=>tog(false));
+addEventListener('keydown',e=>{if(e.key==='Escape')tog(false)});
+$('#toTop').onclick=()=>scrollTo({top:0,behavior:'smooth'});
+$('#toBottom').onclick=()=>scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
+</script>
+</body>
+</html>
